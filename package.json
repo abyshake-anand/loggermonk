@@ -1,0 +1,10 @@
+{
+  "name": "loggermonk",
+  "version": "1.0.0",
+  "description": "Log your project events with ease.",
+  "main": "index.js",
+  "repository": "https://github.com/abyshake-anand/loggermonk",
+  "author": "Abhishek Anand",
+  "license": "MIT",
+  "private": false
+}
