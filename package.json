@@ -1,4 +1,21 @@
 {
+    "name": "loggermonk",
+    "version": "1.0.0",
+    "description": "LoggerMonk is a flexible and scalable event tracking tool that helps you always know what&#x27;s happening with your business. Fast, reliable, easy to use, quickly integrates with your existing systems. In data we trust.",
+    "main": "src/index.js",
+    "scripts": {
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/abyshake-anand/npm-loggermonk"
+    },
+    "keywords": [
+        "loggermonk",
+        "logging",
+        "events"
+    ],
+    "author": "Abhishek A",
+    "license": "MIT",
     "dependencies": {
         "isomorphic-fetch": "^3.0.0"
     },
