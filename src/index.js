@@ -1,12 +1,12 @@
-// const apiUrl = "http://localhost:3000";
+const apiUrlLocal = "http://localhost:3000/api/v1";
 const apiUrl = "https://loggermonk.com/api/v1";
 const fetch = require('isomorphic-fetch');
 
 class LoggerMonkClient {
-    constructor({ apiKey, domain }) {
+    constructor({ apiKey, domain, monkGroup }) {
         this.apiKey = apiKey;
         this.url = domain;
-        this.baseUrl = apiUrl;
+        this.baseUrl = monkGroup ? apiUrlLocal : apiUrl;
     }
 
     async logEvent({
@@ -44,5 +44,11 @@ class LoggerMonkClient {
             headers,
             body: JSON.stringify(body)
         });
+        if (!response.ok) {
+            throw new Error('Failed to log event');
+        }
+        return await response.json();
     }
 }
+
+module.exports = LoggerMonkClient;
